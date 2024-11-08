@@ -1,0 +1,28 @@
+:root {
+    --taskbgcolor: darkgreen;
+    --taskfgcolor: white;
+    --taskbuttonbgcolor: rgba(255, 217, 0, 0.658);
+    --taskbuttonshadowcolor: gray;
+}
+
+#taskList ul {
+    list-style-type: none;
+}
+
+#taskList li {
+    display: flex;
+    background-color: var(--taskbgcolor);
+    color: var(--taskfgcolor);
+    justify-content: space-between;
+    min-width: 300px;
+    margin: 2px;
+    border: black solid 2px;
+}
+
+#taskList li button {
+    background-color: var(--taskbuttonbgcolor);
+    min-width: 50px;
+    font-size: larger;
+    margin: 2px;
+    box-shadow: 2px 2px var(--taskbuttonshadowcolor);
+}
