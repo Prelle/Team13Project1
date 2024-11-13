@@ -3,6 +3,17 @@
     --taskfgcolor: white;
     --taskbuttonbgcolor: lightgreen;
     --taskbuttonshadowcolor: gray;
+    --headerbgcolor: blanchedalmond;
+    --headerseparator: 3px solid black;
+}
+
+header {
+    background-color: var(--headerbgcolor);
+    border-bottom: var(--headerseparator);
+}
+
+header h1 {
+    padding: 5px;
 }
 
 #taskList ul {

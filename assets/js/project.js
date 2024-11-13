@@ -43,6 +43,9 @@ function init() {
             taskListElement.appendChild(ul);
         }
 
+        addTaskButton.addEventListener('click', addTaskListener);
+
+        // Show the project
         emptyDiv.classList.add('d-none');
         projectDiv.classList.remove('d-none');
     }
@@ -56,6 +59,21 @@ function taskCompleteListener(event) {
     markTaskComplete(taskId);
 
     window.location.reload();
+}
+
+function addTaskListener(event) {
+    const project = readProject();
+
+    if (project) {
+        // TODO: Display Add Task modal
+
+        // TODO: Remove test code
+        const taskNumber = project.tasks.length;
+
+        addTask(`New test task ${taskNumber}`);        
+
+        window.location.reload();
+    }        
 }
 
 init();

@@ -32,3 +32,20 @@ function markTaskComplete(taskId) {
 
     localStorage.setItem('project', JSON.stringify(project));
 }
+
+function addTask(name) {
+    const project = readProject();
+
+    if (!project) {
+        return 'No project to update';
+    }
+
+    const newTask = {
+        name,
+        isComplete: false
+    };
+
+    project.tasks.push(newTask);
+
+    localStorage.setItem('project', JSON.stringify(project));
+}
