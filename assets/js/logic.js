@@ -1,6 +1,7 @@
 function createProject(name, description) {
     if(localStorage.getItem('project')){
-        return 'Project already made';
+        console.log("Project Already Made");
+        return
     }
 
     const project = {
@@ -49,3 +50,4 @@ function addTask(name) {
 
     localStorage.setItem('project', JSON.stringify(project));
 }
+
