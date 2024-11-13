@@ -3,13 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-     <!-- Bootstrap CSS -->
-     <link rel="stylesheet" href="assets/css//bootstrap.min.css">
+    <title>ProjectPulse</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
-    <!-- Bootstrap Javascript -->
+    <!-- Main Container -->
+    <div class="container text-center my-5">
+        <!-- Application Title and Description -->
+        <h1>ProjectPulse</h1>
+        <p class="lead">A simple app to manage and track your coding projects.</p>
+        
+        <!-- Original Button to Open the Modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Open to add new project
+        </button>
+
+        <!-- Section where projects or buttons will be dynamically displayed -->
+        <div id="project-section" class="mt-3">
+            <!-- Dynamic content based on localStorage -->
+        </div>
+    </div>
+
+    <!-- Modal structure for Adding a Project -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Add New Project</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="text" id="projectName" class="form-control" placeholder="Project Name">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="addProjectBtn" data-bs-dismiss="modal">Add new project</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap and JavaScript Files -->
     <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/logic.js"></script>
 </body>
 </html>
