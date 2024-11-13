@@ -5,6 +5,14 @@ const descriptionElement = projectDiv.querySelector('#description');
 const taskListElement = projectDiv.querySelector('#taskList');
 const addTaskButton = projectDiv.querySelector('#addTask');
 
+// Modal elements
+const confirmButton = document.querySelector('#confirm');
+const cancelButton = document.querySelector('#cancel');
+const errorText = document.querySelector('#errorText');
+
+// Needed to properly show and hide the Add Task modal via Bootstrap
+const addTaskModal = new bootstrap.Modal(document.querySelector('#addTaskModal'));
+
 function init() {
     const project = readProject();
 
@@ -44,6 +52,8 @@ function init() {
         }
 
         addTaskButton.addEventListener('click', addTaskListener);
+        confirmButton.addEventListener('click', confirmListener);
+        cancelButton.addEventListener('click', cancelListener);
 
         // Show the project
         emptyDiv.classList.add('d-none');
@@ -53,27 +63,36 @@ function init() {
 
 function taskCompleteListener(event) {
     const button = event.target;
-    const taskId = button.dataset.taskId;
-    const project = readProject();
+    const taskId = button.dataset.taskId;    
 
     markTaskComplete(taskId);
 
     window.location.reload();
 }
 
-function addTaskListener(event) {
-    const project = readProject();
+function addTaskListener(event) {    
+    errorText.classList.add('d-none'); // In case the modal was previously opened
+    addTaskModal.show();
+    document.querySelector('#taskName').focus();
+}
 
-    if (project) {
-        // TODO: Display Add Task modal
+function confirmListener(event) {
+    event.preventDefault();
+    
+    const name = document.querySelector('#taskName').value.trim();
 
-        // TODO: Remove test code
-        const taskNumber = project.tasks.length;
-
-        addTask(`New test task ${taskNumber}`);        
+    if(name !== "") {
+        addTask(name);
 
         window.location.reload();
-    }        
+    } else {
+        // Display error message
+        errorText.classList.remove('d-none');
+    }    
+}
+
+function cancelListener(event) {
+    addTaskModal.hide();
 }
 
 init();

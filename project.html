@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,9 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="assets/css//bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/project.css">
 </head>
+
 <body>
     <header>
         <h1><a href="index.html">ProjectPulse</a></h1>
@@ -20,13 +23,35 @@
             <div id="taskList">
                 <p>(No tasks yet)</p>
             </div>
-            <button id="addTask">Add Task</button>
-        </div>
+            <button id="addTask">Add Task</button>            
+        </div>        
     </main>
+
+    <div id="addTaskModal" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <form>
+                    <div class="modal-header">
+                        <h5 class="modal-title">Add Task</h5>                    
+                    </div>
+                    <div class="modal-body">                        
+                        <label for="name">Enter a name for the new task</label><br/>
+                        <input id="taskName" type="text" placeholder="Task name" />
+                        <p id="errorText" class="d-none">Please enter a value</p>                        
+                    </div>
+                    <div class="modal-footer">
+                        <button id="confirm" type="submit" class="btn btn-primary">Create Task</button>
+                        <button id="cancel" type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
     <footer></footer>
-    <!-- Bootstrap Javascript -->     
+    <!-- Bootstrap Javascript -->
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/logic.js"></script>
     <script src="assets/js/project.js"></script>
 </body>
+
 </html>
