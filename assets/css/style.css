@@ -1,0 +1,39 @@
+:root {
+    --taskbgcolor: darkgreen;
+    --taskfgcolor: white;
+    --taskbuttonbgcolor: lightgreen;
+    --taskbuttonshadowcolor: gray;
+    --headerbgcolor: blanchedalmond;
+    --headerseparator: 3px solid black;
+}
+
+header {
+    background-color: var(--headerbgcolor);
+    border-bottom: var(--headerseparator);
+}
+
+header h1 {
+    padding: 5px;
+}
+
+#taskList ul {
+    list-style-type: none;
+}
+
+#taskList li {
+    display: flex;
+    background-color: var(--taskbgcolor);
+    color: var(--taskfgcolor);
+    justify-content: space-between;
+    min-width: 300px;
+    margin: 2px;
+    border: black solid 2px;
+}
+
+#taskList li button {
+    background-color: var(--taskbuttonbgcolor);
+    min-width: 50px;
+    font-size: larger;
+    margin: 2px;
+    box-shadow: 2px 2px var(--taskbuttonshadowcolor);
+}
