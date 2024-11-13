@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Project</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css//bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header>
+        <h1><a href="index.html">ProjectPulse</a></h1>
+    </header>
+    <main>
+        <p id="emptyDiv">There is no project to display</p>
+        <div id="projectDiv" class="d-none">
+            <h2 id="name"></h2>
+            <p id="description"></p>
+            <div id="taskList">
+                <p>(No tasks yet)</p>
+            </div>
+            <button id="addTask">Add Task</button>
+        </div>
+    </main>
+    <footer></footer>
+    <!-- Bootstrap Javascript -->     
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/logic.js"></script>
+    <script src="assets/js/project.js"></script>
+</body>
+</html>
