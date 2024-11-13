@@ -6,3 +6,18 @@
 .modal input {
     min-width: 400px;
 }
+
+main {
+    padding-left: 10px;
+    padding-right: 40px;
+}
+
+#buttonGroup {
+    padding-left: 40px;
+}
+
+.btn {
+    margin: 0 10px;
+    border: solid 1px black;
+    box-shadow: gray 2px 2px 2px;
+}

@@ -23,8 +23,13 @@
             <div id="taskList">
                 <p>(No tasks yet)</p>
             </div>
-            <button id="addTask">Add Task</button>            
-        </div>        
+            <div id="buttonGroup">
+                <button id="addTask" class="btn btn-success">Add Task</button>
+                <button id="deleteProject" class="btn btn-danger">Delete Project</button>
+            </div>
+        </div>
+
+        <button id="createTestProject" class="d-none">Create Project (Debug)</button>
     </main>
 
     <div id="addTaskModal" class="modal" tabindex="-1" role="dialog">
@@ -32,7 +37,7 @@
             <div class="modal-content">
                 <form>
                     <div class="modal-header">
-                        <h5 class="modal-title">Add Task</h5>                    
+                        <h5 class="modal-title">Add Task</h5>
                     </div>
                     <div class="modal-body">                        
                         <label for="name">Enter a name for the new task</label><br/>
@@ -42,6 +47,28 @@
                     <div class="modal-footer">
                         <button id="confirm" type="submit" class="btn btn-primary">Create Task</button>
                         <button id="cancel" type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="deleteConfirmModal" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <form>
+                    <div class="modal-header">
+                        <h5 class="modal-title">Delete Project</h5>
+                    </div>
+                    <div class="modal-body">
+                        <div class="alert alert-danger">
+                            <p>This will permanently delete the project. This action cannot be undone!</p>
+                            <p>Are you sure you want to do this?</p>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="confirmDeletion" type="button" class="btn btn-danger">Delete Project</button>
+                        <button id="cancelDeletion" type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                     </div>
                 </form>
             </div>

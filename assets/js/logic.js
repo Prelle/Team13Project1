@@ -49,3 +49,19 @@ function addTask(name) {
 
     localStorage.setItem('project', JSON.stringify(project));
 }
+
+function deleteProject() {
+    const project = readProject();
+
+    if(!project) {
+        console.log('No project to delete');
+        return;
+    }
+
+    localStorage.removeItem('project');
+}
+
+// For debugging purposes only
+function createTestProject() {
+    createProject('Test project', 'This is a sample project description. It can be very, very long.');
+}
