@@ -3,13 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-     <!-- Bootstrap CSS -->
-     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <title>ProjectPulse</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
-    <!-- Bootstrap Javascript -->
+    <!-- Main Container -->
+    <div class="container text-center my-5">
+        <!-- Application Title and Description -->
+         <header>
+        <h1>ProjectPulse</h1>
+        <p class="lead">A simple app to manage and track your coding projects.</p>
+    </header>
+
+    <main>
+        <div id="emptyDiv">
+        <p>Click here to add project</p>
+        <button class="btn btn-primary" id="createProject">Create Project</button>
+    </div>
+        <div id="projectDiv" class="d-none">
+            <a href="project.html"><h2 id="name"></h2></a>
+            
+            <p id="description"></p>
+        </div>
+    </main>
+
+    <footer></footer>
+    <!-- Bootstrap Javascript -->     
     <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/logic.js"></script>
+    <script src="assets/js/index.js"></script>
 </body>
 </html>
+
