@@ -15,5 +15,7 @@ submit.addEventListener("click", function(event){
     createProject(projectName.value,description.value);
     loadNewPage(event);
 } );
+
+
 // Need to make a button (html, delete button) that needs an event listener, on click, remove project key(localstorage.removeitem)
 
