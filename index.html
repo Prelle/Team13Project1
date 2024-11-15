@@ -13,22 +13,45 @@
     <!-- Main Container -->
     <div class="container text-center my-5">
         <!-- Application Title and Description -->
+         <header>
         <h1>ProjectPulse</h1>
         <p class="lead">A simple app to manage and track your coding projects.</p>
-        
-        <!-- Original Button to Open the Modal -->
+    </header>
+
+    <main>
+        <p id="emptyDiv">There is no project to display</p>
+        <div id="projectDiv" class="d-none">
+            <h2 id="name"></h2>
+            <p id="description"></p>
+        </div>
+    </main>
+
+    <footer></footer>
+    <!-- Bootstrap Javascript -->     
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/logic.js"></script>
+    <script src="assets/js/project.js"></script>
+</body>
+</html>
+
+    <!-- <section>
+        <h2>Current projects</h2>
+        // need to add local storage here //
+    </section> -->
+
+        <!-- Original Button to Open the Modal
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
             Open to add new project
         </button>
 
-        <!-- Section where projects or buttons will be dynamically displayed -->
-        <div id="project-section" class="mt-3">
+        <Section where projects or buttons will be dynamically displayed -->
+        <!-- <div id="project-section" class="mt-3"> -->
             <!-- Dynamic content based on localStorage -->
-        </div>
-    </div>
+        <!-- </div>
+    </div> -->
 
     <!-- Modal structure for Adding a Project -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -44,10 +67,11 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-- Bootstrap and JavaScript Files -->
-    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/logic.js"></script>
 </body>
 </html>
+ --> 
