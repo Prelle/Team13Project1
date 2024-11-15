@@ -12,6 +12,7 @@ function loadNewPage(event) {
 
 submit.addEventListener("click", function(event){
     event.preventDefault();
+    
     createProject(projectName.value,description.value);
     loadNewPage(event);
 } );

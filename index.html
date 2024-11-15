@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,34 +8,44 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/index.css">
 </head>
+
 <body>
 
     <!-- Main Container -->
-    <div class="container text-center my-5">
+    
         <!-- Application Title and Description -->
-         <header>
-        <h1>ProjectPulse</h1>
-        <p class="lead">A simple app to manage and track your coding projects.</p>
-    </header>
+        <header>
+            <h1>projectPulse</h1>            
+        </header>
 
-    <main>
-        <div id="emptyDiv">
-        <p>Click here to add project</p>
-        <button class="btn btn-primary" id="createProject">Create Project</button>
-    </div>
-        <div id="projectDiv" class="d-none">
-            <a href="project.html"><h2 id="name"></h2></a>
-            
-            <p id="description"></p>
-        </div>
-    </main>
+        <main>
+            <div>
+                <h1>Welcome to projectPulse</h1>
+                <p class="lead">A simple app to manage and track your coding projects.</p>
+            </div>
 
-    <footer></footer>
-    <!-- Bootstrap Javascript -->     
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/logic.js"></script>
-    <script src="assets/js/index.js"></script>
+            <div id="emptyDiv">
+                <p><strong>Click below to start tracking your first project.</strong></p>
+                <button class="btn btn-primary" id="createProject">Create Project</button>
+            </div>
+            <div id="projectDiv" class="d-none">
+                <h3><u>Featured Project</u></h3>
+                <a href="project.html">
+                    <h2 id="name"></h2>
+                </a>
+                <p id="description"></p>
+            </div>
+        </main>
+
+        <footer>
+            <h6>Created by the Lucky13's</h6>
+        </footer>
+        <!-- Bootstrap Javascript -->
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/logic.js"></script>
+        <script src="assets/js/index.js"></script>
 </body>
-</html>
 
+</html>

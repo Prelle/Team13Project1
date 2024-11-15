@@ -38,7 +38,7 @@ function init() {
 
     if (project) {
         nameElement.textContent = project.name;
-        descriptionElement.textContent = project.description;
+        descriptionElement.innerHTML = renderHtml(project.description);
 
         if (project.tasks) {
             // Replace the default text with a list of tasks that can be checked off

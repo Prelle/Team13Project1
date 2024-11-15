@@ -5,9 +5,12 @@
     --taskbuttonshadowcolor: gray;
     --headerbgcolor: blanchedalmond;
     --headerseparator: 3px solid black;
+    --footerbgcolor: blanchedalmond;
+    --footerseparator: 1px black solid;
 }
 
 header {
+    padding-left: 3px;
     background-color: var(--headerbgcolor);
     border-bottom: var(--headerseparator);
 }
@@ -46,5 +49,30 @@ footer {
     padding-top: 3px;
     width: 100%;
     text-align: center;
-    border-top: 1px black solid;
+    background-color: var(--footerbgcolor);
+    border-top: var(--footerseparator);
+}
+
+body {
+    background-color: linen;
+}
+
+main {
+    padding-left: 10px;
+    padding-right: 40px;    
+}
+
+#buttonGroup {
+    padding-left: 40px;
+}
+
+.btn {
+    margin: 0 10px;
+    border: solid 1px black;
+    box-shadow: gray 2px 2px 2px;
+}
+
+#errorText {
+    color: red;
+    margin-top: 3px;
 }
