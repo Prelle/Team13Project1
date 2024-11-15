@@ -4,19 +4,37 @@ const nameElement = projectDiv.querySelector('#name');
 const descriptionElement = projectDiv.querySelector('#description');
 const taskListElement = projectDiv.querySelector('#taskList');
 const addTaskButton = projectDiv.querySelector('#addTask');
+const deleteProjectButton = projectDiv.querySelector('#deleteProject');
 
 // Modal elements
 const confirmButton = document.querySelector('#confirm');
 const cancelButton = document.querySelector('#cancel');
 const errorText = document.querySelector('#errorText');
+const confirmDeleteButton = document.querySelector('#confirmDeletion');
+const cancelDeleteButton = document.querySelector('#cancelDeletion');
 
 // Needed to properly show and hide the Add Task modal via Bootstrap
 const addTaskModal = new bootstrap.Modal(document.querySelector('#addTaskModal'));
+const deleteConfirmModal = new bootstrap.Modal(document.querySelector('#deleteConfirmModal'));
+
+// For debugging only
+
+if (localStorage.getItem('isTest') === 'true') {
+    if (!readProject()) {
+        const createTestProjectButton = document.querySelector('#createTestProject');
+
+        createTestProjectButton.addEventListener('click', function (event) 
+        {
+            createTestProject();
+            window.location.reload();
+        });
+
+        createTestProjectButton.classList.remove('d-none');
+    }
+}
 
 function init() {
-    const project = readProject();
-
-    console.log(project);
+    const project = readProject();    
 
     if (project) {
         nameElement.textContent = project.name;
@@ -55,6 +73,10 @@ function init() {
         confirmButton.addEventListener('click', confirmListener);
         cancelButton.addEventListener('click', cancelListener);
 
+        deleteProjectButton.addEventListener('click', deleteProjectListener);
+        confirmDeleteButton.addEventListener('click', confirmDeleteListener);
+        cancelDeleteButton.addEventListener('click', cancelListener);
+
         // Show the project
         emptyDiv.classList.add('d-none');
         projectDiv.classList.remove('d-none');
@@ -91,8 +113,18 @@ function confirmListener(event) {
     }    
 }
 
+function deleteProjectListener(event) {
+    deleteConfirmModal.show();
+}
+
+function confirmDeleteListener(event) {
+    deleteProject();
+    window.location = 'index.html';
+}
+
 function cancelListener(event) {
     addTaskModal.hide();
+    deleteConfirmModal.hide();
 }
 
 init();
