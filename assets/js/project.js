@@ -34,7 +34,7 @@ if (localStorage.getItem('isTest') === 'true') {
 }
 
 function init() {
-    const project = readProject();    
+    const project = readProject();
 
     if (project) {
         nameElement.textContent = project.name;
@@ -70,6 +70,7 @@ function init() {
         }
 
         addTaskButton.addEventListener('click', addTaskListener);
+
         confirmButton.addEventListener('click', confirmListener);
         cancelButton.addEventListener('click', cancelListener);
 
@@ -85,6 +86,7 @@ function init() {
 
 function taskCompleteListener(event) {
     const button = event.target;
+
     const taskId = button.dataset.taskId;    
 
     markTaskComplete(taskId);
