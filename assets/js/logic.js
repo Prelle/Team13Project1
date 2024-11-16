@@ -7,7 +7,8 @@ function createProject(name, description) {
     const project = {
         name,
         description,
-        tasks: []
+        tasks: [],
+        completedTasks: []
     };
 
     localStorage.setItem('project',JSON.stringify(project));
@@ -29,7 +30,8 @@ function markTaskComplete(taskId) {
         return "Specified task doesn't exist";
     }
 
-    project.tasks[taskId].isComplete = true;
+    project.completedTasks.push(project.tasks[taskId]);
+    project.tasks.splice(taskId, 1);    
 
     localStorage.setItem('project', JSON.stringify(project));
 }
@@ -42,8 +44,7 @@ function addTask(name) {
     }
 
     const newTask = {
-        name,
-        isComplete: false
+        name        
     };
 
     project.tasks.push(newTask);
