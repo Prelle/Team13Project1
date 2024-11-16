@@ -9,7 +9,8 @@ const project = readProject();
 
     if (project) {
         nameElement.textContent = project.name;
-        descriptionElement.textContent = project.description;
+        console.log(renderHtml(project.description));
+        descriptionElement.innerHTML = renderHtml(project.description);
         emptyDiv.classList.add('d-none');
         projectDiv.classList.remove('d-none');
     } else {
