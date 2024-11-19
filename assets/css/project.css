@@ -36,3 +36,8 @@
     box-shadow: 2px 2px var(--taskbuttonshadowcolor);
 
 }
+
+main {
+    padding-left: 10px;
+    padding-right: 40px;    
+}
