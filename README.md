@@ -1,6 +1,8 @@
 # projectPulse
 A simple, intuitive web application for tracking project completion.
 
+![The project page](/assets/images/screenshot.png?raw=true)
+
 ## Description
 projectPulse is a website designed to help track programming tasks in a clear and easy-to-use manner. Multiple projects can be tracked at a time, and each task can have several tasks added to it in order to help break the project into manageable chunks for completion.
 
@@ -14,4 +16,3 @@ The site is written in HTML, CSS and JavaScript and utilizes the Bootstrap frame
 * Ability to share projects with multiple team members.
 
 ## Link
-
