@@ -1,5 +1,4 @@
-main {    
-    background-color: black;
+main {        
     background-image: url('../images/background.png');
     background-repeat: repeat-x;
     color: white;
@@ -24,15 +23,6 @@ main {
     transform: translateX(-50%);
     width: 90vw;    
     max-width: 1200px;
-}
-
-a:link {
-    color: lime;
-    text-decoration: none;    
-}
-
-a:hover {
-    color: greenyellow;
 }
 
 #description {
