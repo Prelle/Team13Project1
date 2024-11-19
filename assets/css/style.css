@@ -1,24 +1,60 @@
 :root {
+    /* Header coloring */
+    --headerbgcolor: #0f4d0f;
+    --headerfgcolor: white;
+    --headerseparator: 3px solid lime;
+    
+    /* Main coloring */
+    --mainbgcolor: black;
+    --mainfgcolor: white;
+
+    /* Footer coloring */
+    --footerbgcolor: #0f4d0f;
+    --footerfgcolor: white;
+    --footerseparator: 1px lime solid;
+
+    /* Button coloring */
+    --buttonborder: solid 1px black;
+    --buttonshadow: #333333 2px 2px 2px;
+
+    /* Project description box */
+    --descriptionboxborder: solid 2px darkgreen;
+    --descriptionbgcolor: rgba(20, 20, 20, 0.7);
+
+    /* Links */
+    --linkcolor: lime;
+    --linkhovercolor: greenyellow;
+
+    /* Modals */
+    --modalbgcolor: #444444;
+
+    /* Task colors, used by project page */
     --taskbgcolor: darkgreen;
     --taskfgcolor: white;
+    --taskborder: #666666 solid 2px;
     --taskbuttonbgcolor: lightgreen;
     --taskbuttonshadowcolor: gray;
     --taskcompletedbgcolor: gray;
-    --taskcompletedfgcolor: rgba(255, 255, 255, 0.747);
-    --headerbgcolor: blanchedalmond;
-    --headerseparator: 3px solid black;
-    --footerbgcolor: blanchedalmond;
-    --footerseparator: 1px black solid;
+    --taskcompletedfgcolor: rgba(255, 255, 255, 0.747);    
 }
 
 header {
     padding-left: 3px;
     background-color: var(--headerbgcolor);
+    color: var(--headerfgcolor);
     border-bottom: var(--headerseparator);
 }
 
 header h1 {
     padding: 5px;
+}
+
+main {
+    background-image: url('../images/background.png');
+    background-repeat: repeat-x;    
+    color: white;
+    margin-bottom: 50px;    
+    height: 86vh;    
 }
 
 footer {    
@@ -29,11 +65,14 @@ footer {
     width: 100%;
     text-align: center;
     background-color: var(--footerbgcolor);
+    color: var(--footerfgcolor);
     border-top: var(--footerseparator);
 }
 
 body {
-    background-color: linen;
+    background-color: var(--mainbgcolor);
+    color: var(--mainfgcolor);    
+    height: 100%;
 }
 
 
@@ -43,15 +82,28 @@ body {
 
 .btn {
     margin: 0 10px;
-    border: solid 1px black;
-    box-shadow: gray 2px 2px 2px;
+    border: var(--buttonborder);
+    box-shadow: var(--buttonshadow);
 }
 
 #errorText {
-    color: red;
+    color: pink;
     margin-top: 3px;
 }
 
-main {
-    margin-bottom: 50px; 
+a {
+    color: var(--linkcolor);
+}
+
+a:link {
+    color: var(--linkcolor);
+    text-decoration: none;    
+}
+
+a:hover {
+    color: var(--linkhovercolor);
+}
+
+.modal-content {
+    background-color: var(--modalbgcolor);
 }
