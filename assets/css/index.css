@@ -19,9 +19,11 @@ main {
 
 #projectDiv {
     position: absolute;
-    top: 20%;
+    top: 25%;
     left: 50%;
     transform: translateX(-50%);
+    width: 90vw;    
+    max-width: 1200px;
 }
 
 a:link {
@@ -39,6 +41,8 @@ a:hover {
     border-radius: 5px;
     padding: 5px;
     text-align: left;
+    max-height: 50vh;
+    overflow: auto;
 }
 
 .btn {
