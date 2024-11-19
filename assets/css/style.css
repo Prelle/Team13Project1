@@ -36,11 +36,6 @@ body {
     background-color: linen;
 }
 
-main {
-    padding-left: 10px;
-    padding-right: 40px;   
-    margin-bottom: 50px; 
-}
 
 #buttonGroup {
     padding-left: 40px;
@@ -55,4 +50,8 @@ main {
 #errorText {
     color: red;
     margin-top: 3px;
+}
+
+main {
+    margin-bottom: 50px; 
 }
