@@ -48,22 +48,37 @@ function init() {
             for (let i = 0; i < project.tasks.length; i++) {            
                 const task = project.tasks[i];
                 
-                if (!task.isComplete) {
-                    // Create an li for the task including the name and a Complete button
-                    const li = document.createElement('li');
-                    const p = document.createElement('p');
-                    p.textContent = task.name;
+                // Create an li element for the task containing the name and a Complete button
+                const li = document.createElement('li');                
+                
+                const p = document.createElement('p');
+                p.textContent = task.name;
 
-                    const button = document.createElement('button');
-                    button.dataset.taskId = i;
-                    button.textContent = '✅';
-                    button.addEventListener('click', taskCompleteListener);
+                const button = document.createElement('button');
+                button.dataset.taskId = i;
+                button.textContent = '✅';
+                button.addEventListener('click', taskCompleteListener);
+                
+                li.appendChild(p);                
+                li.appendChild(button);
 
-                    li.appendChild(p);
-                    li.appendChild(button);
+                ul.appendChild(li);
+            }
+            
+            // Add the completed tasks to the end of the list
+            for (let i = 0; i < project.completedTasks.length; i++) {
+                const task = project.completedTasks[i];
 
-                    ul.appendChild(li);
-                }
+                // Create an li element for the task with just the name
+                const li = document.createElement('li');
+                li.classList.add('completed-task');
+
+                const p = document.createElement('p');
+                p.textContent = task.name;
+
+                li.appendChild(p);
+
+                ul.appendChild(li);
             }
 
             taskListElement.appendChild(ul);
@@ -81,6 +96,9 @@ function init() {
         // Show the project
         emptyDiv.classList.add('d-none');
         projectDiv.classList.remove('d-none');
+
+        // Enter key should add another task
+        addTaskButton.focus();
     }
 }
 

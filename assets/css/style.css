@@ -3,6 +3,8 @@
     --taskfgcolor: white;
     --taskbuttonbgcolor: lightgreen;
     --taskbuttonshadowcolor: gray;
+    --taskcompletedbgcolor: gray;
+    --taskcompletedfgcolor: rgba(255, 255, 255, 0.747);
     --headerbgcolor: blanchedalmond;
     --headerseparator: 3px solid black;
     --footerbgcolor: blanchedalmond;
@@ -19,32 +21,9 @@ header h1 {
     padding: 5px;
 }
 
-#taskList ul {
-    list-style-type: none;
-}
-
-#taskList li {
-    display: flex;
-    background-color: var(--taskbgcolor);
-    color: var(--taskfgcolor);
-    justify-content: space-between;
-    min-width: 300px;
-    margin: 2px;
-    border: black solid 2px;
-}
-
-#taskList li button {
-    background-color: var(--taskbuttonbgcolor);
-    min-width: 50px;
-    font-size: larger;
-    margin: 2px;
-    box-shadow: 2px 2px var(--taskbuttonshadowcolor);
-
-}
-
 footer {    
     position: fixed;
-    bottom: 5px;
+    bottom: 0;
     margin: auto;
     padding-top: 3px;
     width: 100%;
@@ -59,7 +38,8 @@ body {
 
 main {
     padding-left: 10px;
-    padding-right: 40px;    
+    padding-right: 40px;   
+    margin-bottom: 50px; 
 }
 
 #buttonGroup {
