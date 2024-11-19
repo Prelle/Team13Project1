@@ -3,11 +3,12 @@ const projectName = document.querySelector("#projectName");
 const description = document.querySelector("#projectDescription");
 const error = document.querySelector('#errorText')
 
+if(readProject()!== null) {
+    loadNewPage()
+}
 
-
-function loadNewPage(event) {
+function loadNewPage() {
     console.log('log')
-    event.preventDefault();
     window.location = "project.html"; 
 };
 
@@ -27,11 +28,10 @@ submit.addEventListener("click", function(event){
         return
     }
     createProject(name, projectDescription);
-    loadNewPage(event);
+    loadNewPage();
 } );
 
 
 
 
-// Need to make a button (html, delete button) that needs an event listener, on click, remove project key(localstorage.removeitem)
 
