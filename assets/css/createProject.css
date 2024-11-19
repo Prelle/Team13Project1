@@ -13,7 +13,11 @@ form{
 #projectDescription{
     width: 90vw;
 }
-#projectTitle{
-    width: 90vw;
+#projectName{
+   width:90vw;
+   max-width: 400px;
 }
 
+#submit{
+    margin-top: 20px;
+}
