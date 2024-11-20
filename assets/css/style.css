@@ -54,8 +54,8 @@ main {
     background-image: url('../images/background.png');
     background-repeat: repeat-x;    
     color: white;
-    margin-bottom: 50px;    
-    height: 86vh;    
+    margin-bottom: 50px;   
+    min-height: 86vh;     
 }
 
 footer {    
