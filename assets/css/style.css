@@ -39,6 +39,7 @@
 }
 
 header {
+    font-family: 'roboto serif', serif;
     padding-left: 3px;
     background-color: var(--headerbgcolor);
     color: var(--headerfgcolor);
